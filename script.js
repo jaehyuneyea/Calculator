@@ -71,17 +71,48 @@ function buttonResponse(evt) {
       break;
     case 'clear':
       update('clear');
+      break;
+    case 'plus':
+      update('+');
+      break;
+    case 'equals':
+      update('=');
   }
 }
-
+let operator;
+let val1 = 0;
 function update(key) {
+    // CLEAR CASE
   if (key == 'clear') {
     displayValue = 0; // might need to come back to it to change stored values
-  } else if (displayValue == 0 && key != '=') { // if displayvalue is 0 and key is not =
-    displayValue = Number(key);
-  } else {
-    displayValue = String(displayValue) + key;
-  }
+    val1 = 0;
+    operator = 0;
+  
+    // OPERATORS CASE
+  } else if (key == '+' || key == '-' || key == '*' || key == '/') {
+    if (val1 != 0) {
+      displayValue = operate(key, Number(val1), Number(displayValue)); // if val1 is not empty (meaning a previous calculation was done), calculate that first and display it before overriding.
+    }
+    operator = key;
+    val1 = displayValue;
 
-  display.textContent = displayValue;
+    // EQUALS CASE
+  } else if (key == '=') {
+    displayValue = operate(operator, Number(val1), Number(displayValue)); // compute the value
+    val1 = 0; // set val1 to zero because once equal is clicked we know the compute is finished until further numbers or operators are entered
+
+    // FIRST NUMBER CASE
+  } else if ((displayValue == 0 && !isNaN(Number(key))) || (operator != undefined && val1 == displayValue )) { // if displayvalue is 0 and key is not = OR some operator is ready and val1 is same as displayValue (means value is on standby since displayValue copies its value to val1)
+    // error: operator case is causing displaynum to not append properly
+    displayValue = Number(key);
+
+    // NON FIRST NUMBER CASE
+  } else {
+    displayValue = String(displayValue) + key; // turn display number into string and append the following numbers onto it
+
+  }
+  display.textContent = displayValue; // we display after any possible operations are finished
+  console.log(`operator: ${operator}`);
+  console.log(`val1: ${val1}`);
+  console.log(`display: ${displayValue}`);
 }
