@@ -86,7 +86,7 @@ function update(key) {
   if (key == 'clear') {
     displayValue = 0; // might need to come back to it to change stored values
     val1 = 0;
-    operator = 0;
+    operator = undefined;
   
     // OPERATORS CASE
   } else if (key == '+' || key == '-' || key == '*' || key == '/') {
