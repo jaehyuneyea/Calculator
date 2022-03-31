@@ -75,6 +75,9 @@ function buttonResponse(evt) {
     case 'plus':
       update('+');
       break;
+    case 'minus':
+      update('-');
+      break;
     case 'equals':
       update('=');
   }
@@ -104,7 +107,7 @@ function update(key) {
 
     // FIRST NUMBER CASE
   } else if ((displayValue == 0 && !isNaN(Number(key))) || (operator != undefined && val1 == displayValue )) { // if displayvalue is 0 and key is not = OR some operator is ready and val1 is same as displayValue (means value is on standby since displayValue copies its value to val1)
-    // error: operator case is causing displaynum to not append properly
+
     displayValue = Number(key);
 
     // NON FIRST NUMBER CASE
@@ -112,7 +115,7 @@ function update(key) {
     displayValue = String(displayValue) + key; // turn display number into string and append the following numbers onto it
 
   }
-  display.textContent = displayValue; // we display after any possible operations are finished
+  display.textContent = displayValue; // display after any possible operations are finished
   console.log(`operator: ${operator}`);
   console.log(`val1: ${val1}`);
   console.log(`display: ${displayValue}`);
