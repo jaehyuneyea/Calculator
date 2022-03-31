@@ -98,6 +98,7 @@ function update(key) {
 
     // EQUALS CASE
   } else if (key == '=') {
+    if (val1 == 0 || displayValue == 0) return; // prevents displayvalue from disappearing when it is = 0
     displayValue = operate(operator, Number(val1), Number(displayValue)); // compute the value
     val1 = 0; // set val1 to zero because once equal is clicked we know the compute is finished until further numbers or operators are entered
 
