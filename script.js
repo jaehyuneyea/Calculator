@@ -78,6 +78,12 @@ function buttonResponse(evt) {
     case 'minus':
       update('-');
       break;
+    case 'times':
+      update('*');
+      break;
+    case 'divide':
+      update('/');
+      break;
     case 'equals':
       update('=');
   }
