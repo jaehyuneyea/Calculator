@@ -11,3 +11,5 @@
   <li>Make it look nicer :)<li>
   <li>Try and encapsulate the calculator into an object</li>
 </ul>
+
+<p>4/21/2022: Haven't put much time into the project since I've been working with interviews and job processes. The functionality of the calculator works. I will make sure to come back to what I plan with testing and what not. But for now, I want to work on the front-end. I will learn CSS Grid and work to make it look like an actual calculator lol</p>
