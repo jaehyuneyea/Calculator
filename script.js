@@ -1,4 +1,6 @@
 let displayValue = 0;
+let operator;
+let val1 = 0;
 
 function add(a,b) {
   return a + b;
@@ -88,9 +90,11 @@ function buttonResponse(evt) {
       update('=');
   }
 }
-let operator;
-let val1 = 0;
+
+// called by the event listener that responds on button press of the calculator: determines current state of the calculator and determines
+// appropriate action to display accordingly
 function update(key) {
+
     // CLEAR CASE
   if (key == 'clear') {
     displayValue = 0; // might need to come back to it to change stored values
@@ -122,7 +126,5 @@ function update(key) {
 
   }
   display.textContent = displayValue; // display after any possible operations are finished
-  console.log(`operator: ${operator}`);
-  console.log(`val1: ${val1}`);
-  console.log(`display: ${displayValue}`);
+
 }
