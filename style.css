@@ -1,0 +1,19 @@
+.buttons {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.button-1,
+.button-2,
+.button-3,
+.button-4,
+.button-5
+{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  border: solid black 1px;
+}
+
+button {
+  width: 100%;
+}
