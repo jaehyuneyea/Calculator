@@ -13,7 +13,7 @@
 
 .buttons {
   display: grid;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-rows: repeat(5, 20%);
   min-height: 500px;
 }
 
@@ -24,7 +24,7 @@
 .button-5
 {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 25%);
 }
 
 button {
