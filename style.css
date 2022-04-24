@@ -1,5 +1,6 @@
 .container {
   width: 450px;
+  margin: auto;
 }
 
 .display {
@@ -14,6 +15,10 @@
   background-color: lightblue;
 
 }
+
+/* #divide {
+  grid-column: 4;
+} */
 
 .buttons {
   display: grid;
