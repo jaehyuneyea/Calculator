@@ -8,7 +8,11 @@
   justify-content: flex-end;
   border: solid black 1px;
   height: 100px;
+  padding-right: 16px;
   font-size: 48px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: lightblue;
+
 }
 
 .buttons {
