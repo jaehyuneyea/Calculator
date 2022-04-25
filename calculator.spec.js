@@ -1,7 +1,5 @@
 const Calculator = require('./calculator');
 
-require('./calculator.js');
-
 describe('calculator', () => {
   const calculator = new Calculator;
 
