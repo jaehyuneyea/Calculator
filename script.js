@@ -128,3 +128,5 @@ function update(key) {
   display.textContent = displayValue; // display after any possible operations are finished
 
 }
+
+module.exports = calculator;
