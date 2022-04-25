@@ -39,6 +39,10 @@
   grid-auto-columns: minmax(25%, auto); 
 }
 
+button:hover {
+  background-color: rgb(158, 158, 158)
+}
+
 button {
   width: 100%;
   height: 100%;
@@ -51,4 +55,8 @@ button {
 
 .operators {
   background-color: orange;
+}
+
+.operators:hover {
+  background-color: rgb(255, 184, 53);
 }
